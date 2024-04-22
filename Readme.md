@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<h1>Spotting AI’s Touch:Identifying LLM-Paraphrased Spans in Text</h1>
+<h1>Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text</h1>
 </div>
 
 <div align="center">
