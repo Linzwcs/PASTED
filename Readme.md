@@ -77,6 +77,24 @@ dataset = load_dataset("linzw/PASTED","classification")
 # eval-multi-paraphrase, eval-OOD,raw-DIPPER, raw-GPT-3.5
 ```
 
+Our experiment incorporates five basic training settings:
+
+- **Classification**: Paraphrased spans are assigned a label of 1, otherwise 0.
+- **Regression-BLEU4**: Paraphrased span signal is calculated using BLEU4.
+- **Regression-POS-BLEU4**: Paraphrased span signal is calculated using POS-BLEU4.
+- **Regression-Syntax**: Paraphrased span signal is calculated using syntax edit distance.
+- **Regression-Multi-Dimension**: Aggregated signals from multiple dimensions.
+
+Additionally, there are two additional testbeds:
+
+- **Eval-Multi-Paraphrase**: Text contains multiple paraphrased spans.
+- **Eval-OOD (Out of Distribution)**: Testbed for out-of-distribution data.
+
+You can also access the original dataset without preprocessing:
+
+- **Raw-DIPPER**
+- **Raw-GPT-3.5**
+
 ## :computer: Try Detection
 
 ### Python Environment
