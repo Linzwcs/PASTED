@@ -93,6 +93,19 @@ pip install Sentence-Transformers==2.2.2
 
 ### Model Access
 
+```
+from detect import Detector
+
+# init detector
+device = 'cpu' # use 'cuda:0' if GPU is available
+model_dir = "linzw/PASTED-Lexical"
+detector = Detector(model_dir,device)
+
+text = "Apple's new credit card will begin a preview roll out today and will become available to all iPhone owners in the US later this month. A random selection of people will be allowed to go through the application process, which involves entering personal details which are sent to Goldman Sachs and TransUnion. Applications are approved or declined in less than a minute. The Apple Card is meant to be broadly accessible to every iPhone user, so the approval requirements will not be as strict as other credit cards. Once the application has been approved, users will be able to use the card immediately from the Apple Wallet app. The physical titanium card can be requested during setup for free, and it can be activated with NFC once it arrives."
+
+result = detector(text)
+```
+
 ### Detection Performance
 
 #### Golden
