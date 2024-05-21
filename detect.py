@@ -25,36 +25,6 @@ import numpy as np
 
 
 class Detector:
-    def __init__(self, model_name, device="cuda") -> None:
-        # device = "cpu"  # use 'cuda:0' if GPU is available
-        # self.model_dir = "nealcly/detection-longformer"
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
-        self.model = AutoModelForSequenceClassification.from_pretrained(model_name)
-        self.device = device
-
-        self.model.to(device)
-        self.model.eval()
-
-    def detect(self, input_text, th=-3.08583984375):
-
-        tokenizer, model, device = self.tokenizer, self.model, self.device
-        label2decisions = {
-            0: "machine-generated",
-            1: "human-written",
-        }
-        tokenize_input = tokenizer(input_text)
-        tensor_input = torch.tensor([tokenize_input["input_ids"]]).to(device)
-        outputs = model(tensor_input)
-        is_machine = -outputs.logits[0][0].item()
-
-        if is_machine < th:
-            decision = 0
-        else:
-            decision = 1
-        return label2decisions[decision]
-
-
-class Defender:
     def __init__(self, model_name, device):
         if "classification" in model_name:
             num_labels = 2
@@ -72,7 +42,9 @@ class Defender:
         self.model.eval()
 
     def __call__(self, text, threshold=None):
-
+        """
+        return_type: sentence or text
+        """
         sents = sent_tokenize(text)
         text = " </s> ".join(sents)
 
@@ -85,24 +57,13 @@ class Defender:
         outputs = self.model(tensor_input).logits.detach().cpu().numpy()
         outputs_logits = outputs[0][sent_label_idx]
         outputs_logits: np.ndarray
+
         if outputs_logits.shape[1] == 2:
             outputs_logits = outputs_logits[:, 1]
+        elif outputs_logits.shape[1] == 3:
+            outputs_logits = outputs_logits.mean(axis=-1)
         outputs_logits = outputs_logits.flatten()
         if threshold is None:
-            return outputs_logits.mean(axis=-1)
+            return list(zip(sents, outputs_logits.tolist()))
         else:
-            return outputs_logits.mean(axis=-1) > threshold
-
-
-def pipe(
-    text,
-    defender,
-    detector,
-    defender_threshold=0,
-    detector_threshold=-3.08583984375,
-):
-    mean_label = defender(text, defender_threshold)
-    if mean_label == 1:
-        return "machine-generated"
-    label = detector(text, detector_threshold)
-    return label
+            return list(zip(sents, (outputs_logits > threshold).tolist()))
