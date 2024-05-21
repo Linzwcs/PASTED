@@ -101,7 +101,7 @@ You can also access the original dataset without preprocessing:
 
 For deploying your own paraphrased span detector, you can simply execute the `env.sh` or you can run:
 
-```python
+```shell
 pip install datasets transformers==4.36.2 nltk stanza evaluate \
 scikit-learn spacy evaluate
 pip install transformers[torch]
