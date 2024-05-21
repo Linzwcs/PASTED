@@ -35,7 +35,6 @@ Welcome to try detection via our **[online demo](https://detect.westlake.edu.cn)
 ## 📌 Table of Contents
 
 - [Introduction](#-introduction)
-- [Activities](#-activities)
 - [Dataset](#-dataset)
 - [Try Detection](#computer--try-detection)
 - [Data Samples](#-data-samples)
@@ -53,9 +52,7 @@ However, there is limited research on the fine-grained detection of texts partia
 To this end, we propose a new task called paraphrased text span detection (PTD). The PTD approach is based on the observation that AI-paraphrased text exhibits distinct writing patterns compared to both the original text and its surrounding context. This repository contains the code to reproduce our experiments and deploy your own detector.
 Our paper can be accessed through the [Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text]().
 
-## 📅 Activities
 
-- 🎉 **May 16, 2024**: Our paper is accepted to ACL 2024!
 
 ## 📝 Dataset
 
