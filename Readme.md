@@ -151,3 +151,15 @@ result = detector(text)
 | Regression (aggregate)   | **0.94** | 26.21%             | **0.66**       | **0.70**         |
 
 ## Citation
+If you use this dataset in your research, please cite it as follows:
+
+```bibtex
+@misc{li2024achieved,
+      title={What Have We Achieved on Non-autoregressive Translation?}, 
+      author={Yafu Li and Huajian Zhang and Jianhao Yan and Yongjing Yin and Yue Zhang},
+      year={2024},
+      eprint={2405.12788},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+'''
