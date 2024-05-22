@@ -35,7 +35,6 @@ Welcome to try detection via our **[online demo](https://detect.westlake.edu.cn)
 ## 📌 Table of Contents
 
 - [Introduction](#-introduction)
-- [Activities](#-activities)
 - [Dataset](#-dataset)
 - [Try Detection](#computer--try-detection)
 - [Evaluation](#evaluation)
@@ -53,9 +52,7 @@ However, there is limited research on the fine-grained detection of texts partia
 To this end, we propose a new task called paraphrased text span detection (PTD). The PTD approach is based on the observation that AI-paraphrased text exhibits distinct writing patterns compared to both the original text and its surrounding context. This repository contains the code to reproduce our experiments and deploy your own detector.
 Our paper can be accessed through the [Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text]().
 
-## 📅 Activities
 
-- 🎉 **May 16, 2024**: Our paper is accepted to ACL 2024!
 
 ## 📝 Dataset
 
@@ -101,7 +98,7 @@ You can also access the original dataset without preprocessing:
 
 For deploying your own paraphrased span detector, you can simply execute the `env.sh` or you can run:
 
-```
+```shell
 pip install datasets transformers==4.36.2 nltk stanza evaluate \
 scikit-learn spacy evaluate
 pip install transformers[torch]
@@ -111,7 +108,7 @@ pip install Sentence-Transformers==2.2.2
 
 ### Model Access
 
-```
+```python
 from detect import Detector
 
 # init detector
@@ -165,3 +162,15 @@ python evaluation.py \
 ```
 
 ## Citation
+If you use this dataset in your research, please cite it as follows:
+
+```bibtex
+@misc{li2024spotting,
+      title={Spotting AI's Touch: Identifying LLM-Paraphrased Spans in Text}, 
+      author={Yafu Li and Zhilin Wang and Leyang Cui and Wei Bi and Shuming Shi and Yue Zhang},
+      year={2024},
+      eprint={2405.12689},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+'''
