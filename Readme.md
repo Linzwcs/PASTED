@@ -154,11 +154,11 @@ result = detector(text)
 If you use this dataset in your research, please cite it as follows:
 
 ```bibtex
-@misc{li2024achieved,
-      title={What Have We Achieved on Non-autoregressive Translation?}, 
-      author={Yafu Li and Huajian Zhang and Jianhao Yan and Yongjing Yin and Yue Zhang},
+@misc{li2024spotting,
+      title={Spotting AI's Touch: Identifying LLM-Paraphrased Spans in Text}, 
+      author={Yafu Li and Zhilin Wang and Leyang Cui and Wei Bi and Shuming Shi and Yue Zhang},
       year={2024},
-      eprint={2405.12788},
+      eprint={2405.12689},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
