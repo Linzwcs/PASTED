@@ -52,8 +52,6 @@ However, there is limited research on the fine-grained detection of texts partia
 To this end, we propose a new task called paraphrased text span detection (PTD). The PTD approach is based on the observation that AI-paraphrased text exhibits distinct writing patterns compared to both the original text and its surrounding context. This repository contains the code to reproduce our experiments and deploy your own detector.
 Our paper can be accessed through the [Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text](https://arxiv.org/abs/2405.12689).
 
-
-
 ## 📝 Dataset
 
 PASTED consists of in-distribution training, validation and test sets, along with a generalization testset. To simulate real-world scenarios, a sampling process is employed, which means randomly paraphrasing a text-span of several consecutive sentences in the original text. The selected text span consists of 1 to 10 sentences
@@ -158,15 +156,16 @@ you can evaluate the model through evaluation.py:
 python evaluation.py \
         --linzw/PASTED-Lexical \
         --device cuda \
-        --gold_testfile file \
+        --gold_testfile ./golden_file/testset.pkl \
 ```
 
 ## Citation
+
 If you use this dataset in your research, please cite it as follows:
 
 ```bibtex
 @misc{li2024spotting,
-      title={Spotting AI's Touch: Identifying LLM-Paraphrased Spans in Text}, 
+      title={Spotting AI's Touch: Identifying LLM-Paraphrased Spans in Text},
       author={Yafu Li and Zhilin Wang and Leyang Cui and Wei Bi and Shuming Shi and Yue Zhang},
       year={2024},
       eprint={2405.12689},
@@ -174,3 +173,4 @@ If you use this dataset in your research, please cite it as follows:
       primaryClass={cs.CL}
 }
 '''
+```
