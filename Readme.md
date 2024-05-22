@@ -50,7 +50,7 @@ AI paraphrasing can suffer from issues like hallucination and bias, which pose s
 However, there is limited research on the fine-grained detection of texts partially paraphrased or polished by AI.
 
 To this end, we propose a new task called paraphrased text span detection (PTD). The PTD approach is based on the observation that AI-paraphrased text exhibits distinct writing patterns compared to both the original text and its surrounding context. This repository contains the code to reproduce our experiments and deploy your own detector.
-Our paper can be accessed through the [Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text]().
+Our paper can be accessed through the [Spotting AI’s Touch: Identifying LLM-Paraphrased Spans in Text](https://arxiv.org/abs/2405.12689).
 
 
 
