@@ -41,16 +41,19 @@ class Detector:
         self.model.to(device)
         self.model.eval()
 
-    def __call__(self, text, threshold=None):
+    @torch.no_grad()
+    def __call__(self, text, preprocess=True, threshold=None):
         """
         return_type: sentence or text
         """
-        sents = sent_tokenize(text)
-        text = " </s> ".join(sents)
+        if preprocess:
+            sents = sent_tokenize(text)
+            text = " </s> ".join(sents)
+        else:
 
-        input_ids = self.tokenizer(
-            text, max_length=2048, truncation=True, padding="max_length"
-        )["input_ids"]
+            sents = text.split(" </s> ")
+        input_ids = self.tokenizer(text, max_length=2048, truncation=True)["input_ids"]
+
         sent_label_idx = [i for i, ids in enumerate(input_ids) if ids == 2]
 
         tensor_input = torch.tensor([input_ids]).to(self.device)
