@@ -38,8 +38,8 @@ Welcome to try detection via our **[online demo](https://detect.westlake.edu.cn)
 - [Activities](#-activities)
 - [Dataset](#-dataset)
 - [Try Detection](#computer--try-detection)
-- [Data Samples](#-data-samples)
-- [Citation](#Citation)
+- [Evaluation](#evaluation)
+- [Citation](#citation)
 <!-- - [Contributing](#-contributing) -->
 
 ## 🚀 Introduction
@@ -152,5 +152,16 @@ result = detector(text)
 | Regression (grammatical) | 0.93     | 20.29%             | **0.66**       | 0.69             |
 | Regression (syntactic)   | 0.90     | 9.63%              | 0.60           | 0.65             |
 | Regression (aggregate)   | **0.94** | 26.21%             | **0.66**       | **0.70**         |
+
+## Evaluation
+
+you can evaluate the model through evaluation.py:
+
+```
+python evaluation.py \
+        --linzw/PASTED-Lexical \
+        --device cuda \
+        --gold_testfile file \
+```
 
 ## Citation
