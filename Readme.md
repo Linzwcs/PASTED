@@ -27,8 +27,7 @@ _<sup>†</sup> Zhejiang University,
 <sup>§</sup> Jilin University,
 <sup>¶</sup> Tencent AI Lab_
 
-Presenting a comprehensive benchmark dataset designed to assess the proficiency of deepfake detectors amidst real-world scenarios.
-Welcome to try detection via our **[online demo](https://detect.westlake.edu.cn)**!
+
 
 </div>
 
