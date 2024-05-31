@@ -19,7 +19,7 @@
 
 _**Yafu Li<sup>†</sup><sup>‡</sup>, Zhilin Wang<sup>§</sup>, Leyang Cui<sup>¶</sup>, Wei Bi<sup>¶</sup>,<br>**_
 _**Shuming Shi<sup>¶</sup>, Yue Zhang<sup>‡</sup><br>**_
-
+A framework for fine-grained AI-generation detection. Check our [Dataset](https://huggingface.co/datasets/linzw/PASTED), [Model](https://huggingface.co/linzw/PASTED-Lexical) and Demo (Coming soon).
 <!-- **Affiliations:** -->
 
 _<sup>†</sup> Zhejiang University,
