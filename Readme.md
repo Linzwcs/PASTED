@@ -19,7 +19,7 @@
 
 _**Yafu Li<sup>†</sup><sup>‡</sup>, Zhilin Wang<sup>§</sup>, Leyang Cui<sup>¶</sup>, Wei Bi<sup>¶</sup>,<br>**_
 _**Shuming Shi<sup>¶</sup>, Yue Zhang<sup>‡</sup><br>**_
-A framework for fine-grained AI-generation detection. Check our [Dataset](https://huggingface.co/datasets/linzw/PASTED), [Model](https://huggingface.co/linzw/PASTED-Lexical) and Demo (Coming soon).
+
 <!-- **Affiliations:** -->
 
 _<sup>†</sup> Zhejiang University,
@@ -27,7 +27,7 @@ _<sup>†</sup> Zhejiang University,
 <sup>§</sup> Jilin University,
 <sup>¶</sup> Tencent AI Lab_
 
-
+A framework for fine-grained AI-generation detection. Check out our [Dataset](https://huggingface.co/datasets/linzw/PASTED) and [Model](https://huggingface.co/linzw/PASTED-Lexical). Online Demo Coming soon.
 
 </div>
 
