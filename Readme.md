@@ -27,7 +27,7 @@ _<sup>†</sup> Zhejiang University,
 <sup>§</sup> Jilin University,
 <sup>¶</sup> Tencent AI Lab_
 
-A framework for fine-grained AI-generation detection. Check out our [Dataset](https://huggingface.co/datasets/linzw/PASTED) and [Model](https://huggingface.co/linzw/PASTED-Lexical).[Online Demo](https://detect.westlake.edu.cn/ptd/).
+A framework for fine-grained AI-generation detection. Check out our [Dataset](https://huggingface.co/datasets/linzw/PASTED) and [Model](https://huggingface.co/linzw/PASTED-Lexical). [Online Demo](https://detect.westlake.edu.cn/ptd/).
 
 </div>
 
